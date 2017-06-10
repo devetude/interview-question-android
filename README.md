@@ -22,32 +22,39 @@ project > build.gradle : 프로그래머가 직접 작성한 그래들 빌드 �
 
 gradle > build.gradle : 앱에 대한 컴파일 버전정보, 의존성 프로젝트에 대한 정의가 되어있는 파일입니다.
 
-### Q3. 안드로이드의 4대 구성요소에 대해서 간단하게 설명하시오.
+### Q3. 안드로이드에서 다국어 지원을 위해 해야할 작업에 대해서 설명하시오.
+다국어 지원을 위해서는 value resource file을 따로 생성해주는 방식으로 사용합니다.
 
-### Q4. 안드로이드 MVC 모델은 어떻게 구성되어있는가?
+'values > 마우스 오른쪽 버튼 클릭 > value resource file > 리소스 파일 이름을 strings로 입력 > available qualifiers 탭에서 locale 선택 > language 탭에서 언어 선택 > specific region only에서 세부 국가 선택'
 
-### Q5. 액티비티(activity)가 무엇인지와 액티비티 생명주기에 대해서 설명하시오.
+파일을 생성하면 디렉토리의 이름은 values-국가코드(예를 들어 values-kr) 형식으로 생성되며 내부에 strings.xml 파일이 생성됩니다. 해당 파일에 string의 name 값은 동일하게 유지한 후 해당 국가의 언어로 번역하여 추가하면됩니다.
 
-### Q6. 안드로이드가 리소스(resource)를 접근하는 방식에 대해서 설명하시오.
+### Q4. 안드로이드의 4대 구성요소에 대해서 간단하게 설명하시오.
 
-### Q7. 서비스(service)가 무엇인지와 서비스 생명주기에 대해서 설명하시오.
+### Q5. 안드로이드 MVC 모델은 어떻게 구성되어있는가?
 
-### Q8. 브로드캐스트 리시버(broadcast receiver)가 무엇인가?
+### Q6. 액티비티(activity)가 무엇인지와 액티비티 생명주기에 대해서 설명하시오.
 
-### Q9. 콘텐트 프로바이더(content provider)가 무엇인가?
+### Q7. 안드로이드가 리소스(resource)를 접근하는 방식에 대해서 설명하시오.
 
-### Q10. 인텐트(intent)와 인텐트 필터(intent filter)에 대해서 설명하시오.
+### Q8. 서비스(service)가 무엇인지와 서비스 생명주기에 대해서 설명하시오.
 
-### Q11. 통지(notification)은 무엇인가?
+### Q9. 브로드캐스트 리시버(broadcast receiver)가 무엇인가?
 
-### Q12. 뷰(view), 뷰 그룹(view group), 뷰 컨테이너(view container), 레이아웃(layout)에 대해서 설명하시오.
+### Q10. 콘텐트 프로바이더(content provider)가 무엇인가?
 
-### Q13. 안드로이드에서 로그(log)를 출력하는 방법과 종류를 설명하시오.
+### Q11. 인텐트(intent)와 인텐트 필터(intent filter)에 대해서 설명하시오.
 
-### Q14. 스타일(style), 테마(theme)에 대해서 설명하시오.
+### Q12. 통지(notification)은 무엇인가?
 
-### Q15. 프레그먼트(fragment)에 대해서 설명하시오.
+### Q13. 뷰(view), 뷰 그룹(view group), 뷰 컨테이너(view container), 레이아웃(layout)에 대해서 설명하시오.
 
-### Q16. 뷰 홀더 패턴(view holder pattern)에 대해서 설명하시오.
+### Q14. 안드로이드에서 로그(log)를 출력하는 방법과 종류를 설명하시오.
 
-### Q17. 나인패치(9patch)란 무엇인가?
+### Q15. 스타일(style), 테마(theme)에 대해서 설명하시오.
+
+### Q16. 프레그먼트(fragment)에 대해서 설명하시오.
+
+### Q17. 뷰 홀더 패턴(view holder pattern)에 대해서 설명하시오.
+
+### Q18. 나인패치(9patch)란 무엇인가?
