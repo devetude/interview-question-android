@@ -122,7 +122,10 @@ xml 레이아웃 파일로 정의한 정보를 런타임에 setContentView 메�
 
 ### Q22. 스타일(style), 테마(theme)에 대해서 설명하시오.
 
-### Q23. 프레그먼트(fragment)에 대해서 설명하시오.
+### Q23. 프레그먼트(fragment)가 와 프레그먼트 생명주기에  설명하시오.
+프레그먼트는 액티비티의 일부분에만 배치되는 화면 및 동작을 조작하기 위한 객체입니다. 안드로이드 3.0(허니콤)에서 화면이 비교적 큰 태블릿의 등장으로 작은 단위의 화면의 생명주기 관리할 필요가 있어 추가되었습니다. 프레그먼트 매니저를 통해서 여러개의 프레그먼트를 조작할 수 있습니다. 레이아웃 xml 파일에서 다른 뷰들과 함께 배치될 수 있습니다.
+
+액티비티가 생성되면 프레그먼트 매니저는 초기화(initializing) 상태가 됩니다. 프레그먼트가 매니저에 의해 추가되면 onAttach, onAttachFragment, onCreate 메소드가 차례로 실행됩니다. 다음으로 액티비티의 onCreate 메소드 호출 이후 매니저는 생성(created) 상태로 변경됩니다. 이때 onCreateView, onViewCreated, onActivityCreated 메소드가 차례로 호출됩니다. 다음으로 액티비티의 onStart 메소드가 호출되면 매니저는 시작(started) 상태로 onStart 메소드를 호출합니다. 이후 액티비티의 onResume 메소드가 호출되면 매니저 역시 재시작(resume) 상태로 변하며 onResume 메소드를 호출합니다. 그 외 액티비티가 화면에서 보이지 않을경우 호출되는 onStop 메소드 호출 이후 매니저는 중지(stop) 상태가 되며 액티비티의 onDestroy 메소드 호출 이후 매니저는 onDestroyView 메소드를 호출합니다.
 
 ### Q24. 뷰 홀더 패턴(view holder pattern)에 대해서 설명하시오.
 
