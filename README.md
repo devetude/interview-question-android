@@ -149,10 +149,10 @@ xml 레이아웃 파일로 정의한 정보를 런타임에 setContentView 메�
 ### Q29. NDK에 대해서 설명하라.
 
 ### Q30. NDK에서 로그캣(logcat)에 로그를 출력하기 위해 어떻게 해야하는가?
-cpp 파일에서 #include <android/log.h>를 선언한 후 __android_log_print(태그_종류, 앱_아이디, 메세지, 1) 메소드를 호출하여 로그캣에 로그를 출력할 수 있습니다.
+android/log.h 헤더를 임포트 한 후 __android_log_print 메소드를 호출하여 NDK 환경에서 로그캣에 로그를 출력할 수 있습니다.
 
 ```cpp
 #include <android/log.h>
-
+...중략...
 __android_log_print(ANDROID_LOG_VERBOSE, "com.example", "hello world!", 1);
 ```
