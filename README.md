@@ -156,3 +156,5 @@ android/log.h 헤더를 임포트 한 후 __android_log_print 메소드를 호�
 ...중략...
 __android_log_print(ANDROID_LOG_VERBOSE, "com.example", "hello world!", 1);
 ```
+
+### Q31. 안드로이드의 컨텍스트(context) 객체에 대해 설명하시오.
