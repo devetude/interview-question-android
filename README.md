@@ -158,3 +158,5 @@ __android_log_print(ANDROID_LOG_VERBOSE, "com.example", "hello world!", 1);
 ```
 
 ### Q31. 안드로이드의 컨텍스트(context) 객체에 대해 설명하시오.
+
+### Q32. 액티비티의 4가지 launchMode에 대해서 비교 설명하시오.
