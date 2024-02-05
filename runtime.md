@@ -1,4 +1,4 @@
-# Process Virtual Machine
+## Process Virtual Machine
 - 하나의 프로세스의 처리를 위해 생성된 가상 컴퓨터
 - 하나의 코드로 다른 환경의 컴퓨터에서도 동일하게 작업을 수행
 - 가상화 정도에 따라 에뮬레이션, 가상화, 반가상화로 나뉨
@@ -29,4 +29,4 @@
 - 기존 DalvikVM의 단점인 실행 속도가 느린 부분과 많은 메모리 사용량 개선
 - 안드로이드 8.0 이후에는 ART와 JIT 방식을 조합
 
-![process_virtual_machine](https://github.com/devetude/interview-question-android/blob/master/img/process-virtual-machine.jpg?raw=true)
+![runtime](https://github.com/devetude/interview-question-android/blob/master/img/runtime.jpg?raw=true)
