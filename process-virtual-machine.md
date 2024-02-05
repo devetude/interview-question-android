@@ -28,3 +28,5 @@
   - AOT: 앱이 설치되는 시점에 목적 코드로 컴파일 및 저장하는 방식
 - 기존 DalvikVM의 단점인 실행 속도가 느린 부분과 많은 메모리 사용량 개선
 - 안드로이드 8.0 이후에는 ART와 JIT 방식을 조합
+
+![process_virtual_machine](https://github.com/devetude/interview-question-android/blob/master/img/process-virtual-machine.jpg?raw=true)
