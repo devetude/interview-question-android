@@ -20,3 +20,19 @@
 - 보통 Target SDK 버전과 동일하게 설정
 
 ![sdk_version](https://github.com/devetude/interview-question-android/blob/master/img/sdk-version.jpg?raw=true)
+
+## Gradle Settings
+- 앱 수준 빌드 그래들 스크립트에 SDK 버전을 정의
+- 안드로이드 빌드 그래들에 의해 빌드 시간에 `<uses-sdk>` 요소에 병합
+
+```build.gradle.kts
+// app/build.gradle.kts
+android {
+  compileSdk = 33
+
+  defaultConfig {
+      minSdk = 26
+      targetSdk = 33
+  }
+}
+```
