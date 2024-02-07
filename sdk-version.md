@@ -18,3 +18,5 @@
 - 앱을 컴파일할 때 사용할 API 수준
 - 개발자가 사용 불가능한 API를 실수로 사용하는 부분을 검증하는 용도
 - 보통 Target SDK 버전과 동일하게 설정
+
+![sdk_version](https://github.com/devetude/interview-question-android/blob/master/img/sdk-version.jpg?raw=true)
