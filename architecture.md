@@ -46,3 +46,5 @@
 ## 리눅스 커널
 - 운영체제의 핵심 부분으로 프로세스, 메모리, 파일, 네트워크 및 기타 하드웨어와 통신 담당
 - 안드로이드 커널은 하드웨어에 의존하지 않는 모듈과 제조사별 모듈로 분할
+
+![architecture](https://github.com/devetude/interview-question-android/blob/master/img/architecture.jpg?raw=true)
