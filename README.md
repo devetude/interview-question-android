@@ -6,10 +6,10 @@
 - [SDK Version](https://github.com/devetude/interview-question-android/blob/master/core/sdk-version.md)
 - [Zygote](https://github.com/devetude/interview-question-android/blob/master/core/zygote.md)
 
-## Coroutines
-- [Process]()
-- [Thread]()
-- [Coroutine]()
-- [Memory Area](https://github.com/devetude/interview-question-android/blob/master/coroutines/memory-area.md)
-- [IPC]()
-- [Context Swithcing]()
+## Process
+- [Process](https://github.com/devetude/interview-question-android/blob/master/process/process.md)
+- [Thread](https://github.com/devetude/interview-question-android/blob/master/process/thread.md)
+- [Coroutine](https://github.com/devetude/interview-question-android/blob/master/process/coroutine.md)
+- [Memory Area](https://github.com/devetude/interview-question-android/blob/master/process/memory-area.md)
+- [IPC](https://github.com/devetude/interview-question-android/blob/master/process/ipc.md)
+- [Context Swithcing](https://github.com/devetude/interview-question-android/blob/master/process/context-switching.md)
