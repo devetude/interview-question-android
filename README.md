@@ -9,7 +9,6 @@
 ## Process
 - [Process](https://github.com/devetude/interview-question-android/blob/master/process/process.md)
 - [Thread](https://github.com/devetude/interview-question-android/blob/master/process/thread.md)
-- [Coroutine](https://github.com/devetude/interview-question-android/blob/master/process/coroutine.md)
 - [Memory Area](https://github.com/devetude/interview-question-android/blob/master/process/memory-area.md)
 - [IPC](https://github.com/devetude/interview-question-android/blob/master/process/ipc.md)
 - [Context Swithcing](https://github.com/devetude/interview-question-android/blob/master/process/context-switching.md)
