@@ -10,3 +10,6 @@
 - [Process]()
 - [Thread]()
 - [Coroutine]()
+- [Memory Area](https://github.com/devetude/interview-question-android/blob/master/coroutines/memory-area.md)
+- [IPC]()
+- [Context Swithcing]()
