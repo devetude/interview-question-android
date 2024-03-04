@@ -12,3 +12,6 @@
 - [Memory Area](https://github.com/devetude/interview-question-android/blob/master/process/memory-area.md)
 - [IPC](https://github.com/devetude/interview-question-android/blob/master/process/ipc.md)
 - [Context Swithcing](https://github.com/devetude/interview-question-android/blob/master/process/context-switching.md)
+
+## DI
+- [DI](https://github.com/devetude/interview-question-android/blob/master/di/di.md)
