@@ -60,6 +60,9 @@ class MainActivity : AppCompatActivity() {
 class LogsFragment : Fragment() {
   @Inject
   lateinit var logger: LoggerLocalDataSource
+
+  @Inject
+  lateinit var dateFormatter: DateFormatter
 }
 ```
 
