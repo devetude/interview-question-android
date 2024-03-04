@@ -55,7 +55,8 @@ class MainActivity : AppCompatActivity() {
   @Inject
   lateinit var navigator: AppNavigator
 }
-
+```
+```kt
 @AndroidEntryPoint
 class LogsFragment : Fragment() {
   @Inject
