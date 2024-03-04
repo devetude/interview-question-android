@@ -47,15 +47,19 @@ class LogApplication : Application()
 - `@Inject` 어노테이션으로 종속 항목을 주입 받을 수 있음
   - 액티비티의 종속 항목은 `onCreate` 시점에 주입
   - 프래그먼트의 종속 항목은 `onAttach` 시점에 주입
+  - `private` 한정자를 사용할 수 없음
 - 프래그먼트 컨테이너를 사용하기 위해서는 반드시 해당 프래그먼트를 포함하는 액티비티도 컨테이너로 만들어야 함
 ```kt
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity()
+class MainActivity : AppCompatActivity() {
+  @Inject
+  lateinit var navigator: AppNavigator
+}
 
 @AndroidEntryPoint
 class LogsFragment : Fragment() {
-    @Inject
-    private lateinit var logger: LoggerLocalDataSource
+  @Inject
+  lateinit var logger: LoggerLocalDataSource
 }
 ```
 
@@ -68,11 +72,11 @@ class LoggerLocalDataSource @Inject constructor(private val logDao: LogDao)
 ```
 
 ## Module
-- 프로젝트에 포함된 클래스의 경우 `@Inject` 어노테이션으로 인스턴스 제공 방법을 정의
-- 인터페이스는 생성자가 없기 때문에 불가능하며, 프로젝트에 포함되지 않은 클래스도 코드를 수정할 수 없기 때문에 불가능
+- 프로젝트에 포함되지 않은 클래스도 코드를 수정할 수 없기 때문에 인스턴스 제공 방법 정의가 쉽지 않음
+- 인터페이스는 생성자가 없기 때문에 인스턴스 제공 방법 정의가 쉽지 않음
 - `@Module` 어노테이션으로 모듈 컨테이너 정의
 - `@InstallIn` 어노테이션으로 모듈 컨테이너의 연결된 구성요소를 정의
-- `@Provide` 어노테이션으로 함수를 통해 인스턴스 제공 방법 정의
+- 빌더 패턴은 `@Provide` 어노테이션으로 함수를 통해 인스턴스 제공 방법 정의 가능
 ```kt
 @Module
 @InstallIn(SingletonComponent::class)
@@ -84,5 +88,14 @@ object DatabaseModule {
 
   @Provides
   fun provideDao(db: AppDatabase): LogDao = db.logDao()
+}
+```
+- 인터페이스는 `@Binds` 어노테이션으로 추상 함수와 구현 객체를 인자로 하여 인스턴스 제공 방법 정의 가능
+```kt
+@Module
+@InstallIn(ActivityComponent::class)
+abstract class NavigationModule {
+    @Binds
+    abstract fun bindNavigator(impl: AppNavigatorImpl): AppNavigator
 }
 ```
