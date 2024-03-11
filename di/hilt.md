@@ -174,3 +174,17 @@ fun provideMemoryDatabase(@ApplicationContext context: Context): MemoryDatabase 
 ```kt
 class DeviceManager @Inject constructor(@ApplicationContext private val context: Context)
 ```
+
+## Scopes
+- 안드로이드 클래스의 수명 주기에 따라 생성된 구성요소 클래스의 인스턴스를 자동으로 만들고 제거
+
+|        **컴포넌트**       |     **생성 시점**     |             **소멸 시점**             |
+|:-------------------------:|:---------------------:|:-------------------------------------:|
+|     SingletonComponent    | Application#onCreaate |         Application destroyed         |
+| ActivityRetainedComponent |  Activity#onCreate()  | Activity#onDestroy() (구성 변경 제외) |
+|     ViewModelComponent    |   ViewModel created   |          ViewModel destroyed          |
+|     ActivityComponent     |  Activity#onCreate()  | Activity#onDestroy() (구성 변경 포함) |
+|     FragmentComponent     |  Fragment#onAttach()  |          Fragment#onDestroy()         |
+|       ViewComponent       |      View#super()     |             View destroyed            |
+| ViewWithFragmentComponent |      View#super()     |             View destroyed            |
+|      ServiceComponent     |   Service#onCreate()  |          Service#onDestroy()          |
