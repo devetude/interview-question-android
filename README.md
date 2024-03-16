@@ -16,3 +16,6 @@
 ## DI
 - [DI](https://github.com/devetude/interview-question-android/blob/master/di/di.md)
 - [Hilt](https://github.com/devetude/interview-question-android/blob/master/di/hilt.md)
+
+## Coroutines
+- [Dispatcher](https://github.com/devetude/interview-question-android/blob/master/coroutines/dispatcher.md)
