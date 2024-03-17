@@ -6,6 +6,9 @@
 - [SDK Version](https://github.com/devetude/interview-question-android/blob/master/core/sdk-version.md)
 - [Zygote](https://github.com/devetude/interview-question-android/blob/master/core/zygote.md)
 
+## View
+- [Layout Inflater](https://github.com/devetude/interview-question-android/blob/master/view/layout-inflater.md)
+
 ## Process
 - [Process](https://github.com/devetude/interview-question-android/blob/master/process/process.md)
 - [Thread](https://github.com/devetude/interview-question-android/blob/master/process/thread.md)
