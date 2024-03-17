@@ -33,7 +33,7 @@ override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, saved
 
 override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchAppealItemViewHolder {
   val inflater = LayoutInflater.from(parent.context)
-  val view = inflater.inflate(R.layout.x, parent, false /* attachToParent */)
+  val view = inflater.inflate(R.layout.x, parent, false /* attachToRoot */)
 
   return XViewHolder(view)
 }
