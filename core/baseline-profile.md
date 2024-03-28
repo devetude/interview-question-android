@@ -12,3 +12,44 @@
   - 런타임에 JIT 컴파일을 통한 최적화 또는 유휴 상태에서 최적화된 형태의 dex 파일로 변경되긴 함
 
 ![baseline-profile](https://github.com/devetude/interview-question-android/blob/master/img/baseline-profile.jpg?raw=true)
+
+## Create Baseline Profiles
+1. 기준 프로파일 모듈 생성
+- `File > New > New Module > Templates > Baseline Profile Generator`
+```kts
+// settings.gradle.kts
+include ":baseline-profile"
+```
+```kts
+// build.gradle.kts
+plugins {
+  id("androidx.baselineprofile")
+}
+
+dependencies {
+    baselineProfile(project(":baseline-profile"))
+}
+```
+2. 사용자가 자주 사용할 기능에 대한 JUnit 테스트 추가
+```kt
+@LargeTest
+@RunWith(AndroidJUnit4::class)
+class BaselineProfileGenerator {
+    @get:Rule
+    val rule = BaselineProfileRule()
+
+    @Test
+    fun generate() = rule.collect(
+        packageName = InstrumentationRegistry.getArguments().getString("PACKAGE_NAME")
+            ?: throw Exception("targetAppId not passed as instrumentation runner arg"),
+        includeInStartupProfile = true
+    ) {
+        pressHome()
+        startActivityAndWait()
+
+        // TODO: Write more interactions to optimize advanced journeys.
+    }
+}
+```
+3. 테스트 실행 결과로 만들어진 프로파일을 `src/main` 디렉토리 밑으로 이동
+- 결과 저장 경로: `src/<variant>/generated/baselineProfiles/baseline-prof.txt`
