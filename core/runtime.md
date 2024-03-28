@@ -30,6 +30,6 @@
 - AOT 컴파일을 이용하여 앱 설치 시점에 목적코드로 컴파일 및 저장
 - 설치 시간과 프로그램의 크기가 늘어났지만 런타임에 필요한 컴파일 시간을 줄여 실행 시간 단축
 - 기존 DalvikVM의 단점인 실행 속도가 느린 부분과 많은 메모리 사용량 개선
-- 안드로이드 8.0 이후에는 베이스 프로파일링을 통해 AOT와 JIT 방식을 조합하여 성능 개선
+- 안드로이드 8.0 이후에는 [베이스 프로파일](https://github.com/devetude/interview-question-android/blob/master/core/baseline-profile.md)을 통해 AOT와 JIT 방식을 조합하여 성능 개선
 
 ![runtime](https://github.com/devetude/interview-question-android/blob/master/img/runtime.jpg?raw=true)
