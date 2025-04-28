@@ -12,7 +12,8 @@ val context = Job() + SupervisorJob() + Dispatchers.Main + CoroutineName("devetu
 ```
 
 - 각각의 코루틴은 각각의 컨텍스트를 지님
-- 부모 컨텍스트 안에서 launch 함수를 통해 실행된 자식 코루틴의 경우 기본적으로 부모의 컨텍스트를 상속하고, 추가로 특정 요소에 대한 부분을 덮어쓸 수 있음
+- 부모 컨텍스트 안에서 `launch` 함수를 통해 실행된 자식 코루틴의 경우 기본적으로 부모의 컨텍스트를 상속
+- 추가로 특정 요소에 대한 부분을 덮어쓸 수 있음
 
 ```context.kt
 val job = launch(Dipatcher.Default + CoroutineName("parent")) {
