@@ -1,11 +1,11 @@
 ## Definition
 - 코루틴이 실행될 때 필요한 여러가지 실행 환경 정보들의 집합
-- Job, Dispatcher, CoroutineName, CoroutineExceptionHandler, key-value 형태의 기타 요소를 결합하여 구성
+- `Job`, `Dispatcher`, `CoroutineName`, `CoroutineExceptionHandler`, key-value 형태의 기타 요소를 결합하여 구성
 
 ## Features
-- 내부적으로 CoroutineContext.Element 즉, key-value 쌍의 집합으로 구성
+- 내부적으로 `CoroutineContext.Element` 즉, key-value 쌍의 집합으로 구성
 - 존재하지 않는 키에 값을 추가하면 해당 키로 값이 추가되며, 이미 있는 키에 다른 값을 추가하면 덮어씀
-- + 연산자를 통해 요소를 결합하는 형태로 구성할 수 있음
+- `+` 연산자를 통해 요소를 결합하는 형태로 구성할 수 있음
 
 ```context.kt
 val context = Job() + SupervisorJob() + Dispatchers.Main + CoroutineName("devetude")
